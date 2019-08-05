@@ -20,11 +20,11 @@ const functionWithPromise = item => { //a function that returns a promise
 }
 
 const anAsyncFunction = async item => {
-  return await functionWithPromise(item)
+  return functionWithPromise(item)
 }
 
 const getData = async () => {
-  return await Promise.all(list.map(item => anAsyncFunction(item)))
+  return Promise.all(list.map(item => anAsyncFunction(item)))
 }
 
 const data = getData()
